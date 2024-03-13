@@ -3,12 +3,12 @@ import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../constants/langs.ts";
 import { Table } from "react-bootstrap";
 
-import croissant from "../views/Images/croissant.jpg";
-import galleta from "../views/Images/galleta.jpg";
-import palmera from "../views/Images/palmera.jpg";
-import lazo from "../views/Images/lazo.jpeg";
-import tarta from "../views/Images/tarta.jpg";
-import napolitana from "../views/Images/napolitanajpeg.jpeg";
+import croissant from "./Images/croissant.jpg";
+import galleta from "./Images/galleta.jpg";
+import palmera from "./Images/palmera.jpg";
+import lazo from "./Images/lazo.jpeg";
+import tarta from "./Images/tarta.jpg";
+import napolitana from "./Images/napolitanajpeg.jpeg";
 
 const Pasteleriabolleria = () => {
     const { t, i18n } = useTranslation();

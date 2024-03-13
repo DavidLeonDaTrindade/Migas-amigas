@@ -2,8 +2,8 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../constants/langs.ts";
 import { Table } from "react-bootstrap";
-import panmasamadre from "../views/Images/panmasamadre.jpg";
-import panbarra from "../views/Images/panbarra.jpeg";
+import panmasamadre from "./Images/panmasamadre.jpg";
+import panbarra from "./Images/panbarra.jpeg";
 
 const Panaderia = () => {
     const { t, i18n } = useTranslation();

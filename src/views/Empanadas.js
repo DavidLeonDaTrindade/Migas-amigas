@@ -1,8 +1,8 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Table } from "react-bootstrap";
-import empanada from "../views/Images/empanada.jpg";
-import empanadacarne from "../views/Images/empanadacarne.jpeg";
+import empanada from "./Images/empanada.jpg";
+import empanadacarne from "./Images/empanadacarne.jpeg";
 
 
 
