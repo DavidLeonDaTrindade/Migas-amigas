@@ -1,14 +1,24 @@
 import i18n from "i18next";
+import i18nBackend from "i18next-http-backend";
 import { initReactI18next} from "react-i18next";
 
+const getCurrentHost = process.env.REACT_APP_MODE === 'development' ? 'http://localhost:5500' : 'LINK TO PROD'
+
+console.log("react_app_mode: " + process.env.REACT_APP_MODE);
+console.log("CurrentHost: " + getCurrentHost);
 i18n 
     .use(initReactI18next)
+    .use(i18nBackend)
     .init({
         lng: "es",
         fallbackLng: "es",
         interpolation:{
             escapeValue: false,
         },
+        backend: {
+            loadPath: `${getCurrentHost}/public/i18n/{{lng}}.json`,
+            },
+            
         resources:{
             pt:{
                 translation:{
@@ -21,7 +31,13 @@ i18n
                     pasteleriabolleria:'Esta é a seção de pastelaria e pastelaria.',
                     inicio:'Página inicial',
                     inicio1:'Inicio',
-                    TituloEmpanada:'Aproveite nossas Empanadas'
+                    TituloEmpanada:'Aproveite nossas Empanadas',
+                    textoInicio:" Descubra o prazer do pão fresco e dos doces irresistíveis na nossa padaria. De croissants fresquinhos a deliciosos pastéis, cada mordida é cheia de amor e sabor. Junte-se à nossa família e faça de cada visita uma experiência deliciosa. Esperamos por você nas Migas Amigas!",
+                    direccion:"Estamos localizados na Rua Hermano Pedro, 5.",
+                    tituloPan:"Aproveite nossos pães",
+                    titulodulces:"Aproveite nossos doces caseiros"
+                   
+
                 }
             },
         
@@ -36,7 +52,11 @@ i18n
                     pasteleriabolleria:'Esta es la seccion de la pasteleria y bolleria',
                     inicio:'Pagina de inicio',
                     inicio1:'Inicio',
-                    TituloEmpanada:'Disfruta de nuestras Empanadas'
+                    TituloEmpanada:'Disfruta de nuestras Empanadas',
+                    textoInicio:"Descubre el placer del pan fresco y los dulces irresistibles en nuestra panadería. Desde croissants recién horneados hasta pasteles deliciosos, cada bocado está lleno de amor y sabor. Únete a nuestra familia y haz de cada visita una experiencia deliciosa. ¡Te esperamos en Migas Amigas!",
+                    direccion:"Nos encontramos en la calle Hermano Pedro nº5",
+                    tituloPan:"Disfruta de nuestros panes",
+                    titulodulces:"Disfruta de nuestros dulces caseros"
                 }
             }
         }

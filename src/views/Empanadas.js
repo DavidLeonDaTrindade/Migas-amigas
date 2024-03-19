@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import { Table } from "react-bootstrap";
 import empanada from "./Images/empanada.jpg";
 import empanadacarne from "./Images/empanadacarne.jpeg";
+import empanadapollo from "./Images/empanadapollo.jpeg";
+import empanadablanco from "./Images/empanadablanco.jpg";
 
 
 
@@ -12,6 +14,9 @@ const Empanadas = () => {
     const products = [
         { id: 1, name: { es: "Empanada de queso", pt:"Empada de queijo"}, description:{es:"Masa de harina frita rellena de queso", pt:"Massa de farinha frita recheada com queijo"}, image:empanada},
         { id: 2, name: { es: "Empanada de carne mechada", pt:"empanada de carne desfiada"}, description:{es:"Masa de harina frita rellena de carne de res picada", pt:"Massa de farinha frita recheada com carne picada"}, image:empanadacarne},
+        { id: 3, name: { es: "Empanada de Pollo", pt:"Empanada de frango"}, description:{es:"Masa de harina frita rellena de pollo desmechado", pt:"Massa de farinha frita recheada com frango desfiado"}, image:empanadapollo},
+        { id: 4, name: { es: "Empanada de queso blanco", pt:"Empanada de queijo branco"}, description:{es:"Masa de harina frita rellena de queso blanco", pt:"Massa de farinha frita recheada com queijo branco"}, image:empanadablanco},
+        
     ];
     return(
         <div className="container mt-4">

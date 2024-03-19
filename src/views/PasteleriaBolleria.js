@@ -9,7 +9,8 @@ import palmera from "./Images/palmera.jpg";
 import lazo from "./Images/lazo.jpeg";
 import tarta from "./Images/tarta.jpg";
 import napolitana from "./Images/napolitanajpeg.jpeg";
-
+import tresleches from "./Images/tresleches.jpg";
+import tartachoco  from "./Images/tartachoco.jpg";
 const Pasteleriabolleria = () => {
     const { t, i18n } = useTranslation();
 
@@ -21,12 +22,15 @@ const Pasteleriabolleria = () => {
         { id: 5, name: { es: "Lazo de huevo",pt:"laço de ovo"}, description:{es:"lazo de hojaldre bañado en crema irlandesa", pt:"massa folhada mergulhada em creme irlandês"}, image:lazo},
         { id: 6, name: { es: "Tarta de santiago", pt:"Bolo de Santiago"}, description:{es:"Tarta de almendras, nueces y azucar", pt:"bolo de amêndoa, nozes e açúcar"}, image:tarta},
         { id: 7, name: { es: "Napolitana de chocolate", pt:"chocolate napolitano"}, description:{es:"Masa de hojaldre relleno de chocolate", pt:"Massa folhada recheada com chocolate"}, image:napolitana},
+        { id: 8, name: { es: "Tarta tres leches", pt:"Bolo Três Leites"}, description:{es:"Bizcochon empapado en diferentes tipos de leches", pt:"Pão de ló embebido em diferentes tipos de leite"}, image:tresleches},
+        { id: 9, name: { es: "Tarta de chocolate", pt:"Torta de chocolate"}, description:{es:"Tarta bañada en diferentes chocolates", pt:"Bolo mergulhado em chocolates diferentes"}, image:tartachoco}
         
 
     ];
 
     return (
         <div className="container mt-4">
+            <h1 className="text-center">{t("titulodulces")}</h1>
         <Table striped bordered hover responsive variant="warning">
             
             <tbody>

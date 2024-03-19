@@ -16,7 +16,7 @@ const HeaderNav = () => {
 
     return (
         <div>
-           <h1 className="text-center" style={{ backgroundColor: '#fd7e14' }}>{t("titleHeader")}</h1>
+           <h1 className="text-center">{t("titleHeader")}</h1>
 
 
             <select style={{ float: 'right' }} defaultValue={i18n.language} onChange={onChangeLang}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import {Routes, Route, BrowserRouter} from "react-router-dom";
 import Principal from "../views/Principal";
 import Panaderia from "../views/Panaderia";
@@ -12,6 +12,7 @@ import Error from "../views/Error404";
 const MisRutas = () =>{
     return(
         <div style={{marginLeft: '20px', marginRight: '20px'}}>
+            <Suspense fallback="loading">
             <BrowserRouter>
                 <HeaderNav/><hr/>
                 <Routes>
@@ -24,6 +25,7 @@ const MisRutas = () =>{
                     <Route path="*" element={<Error/>}/>
                 </Routes>
             </BrowserRouter>
+            </Suspense>
             <hr/>
             <Footer/>
         </div>
