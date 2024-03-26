@@ -1,0 +1,25 @@
+.product-row {
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.product-row:hover {
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+.product-image {
+    max-width: 100px; /* Tamaño máximo para la imagen */
+    max-height: 100px; /* Tamaño máximo para la imagen */
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    transition: transform 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.product-row:hover .product-image {
+    transform: scale(2);
+    z-index: 2;
+}

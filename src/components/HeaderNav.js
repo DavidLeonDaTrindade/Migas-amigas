@@ -16,7 +16,7 @@ const HeaderNav = () => {
 
     return (
         <div>
-           <h1 className="text-center">{t("titleHeader")}</h1>
+           <h1 style={{ fontWeight: "bold", marginTop:"20px" }} className="text-center">{t("titleHeader")}</h1>
 
 
             <select style={{ float: 'right' }} defaultValue={i18n.language} onChange={onChangeLang}>
@@ -26,7 +26,7 @@ const HeaderNav = () => {
                 </select>
 
                     
-            <Navbar  bg="light" expand="lg">
+            <Navbar style={{ fontWeight: "bold", fontSize:"20px"}}  bg="light" expand="lg">
                 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

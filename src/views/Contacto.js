@@ -13,7 +13,9 @@ const { i18n, t } = useTranslation();
         <div>
             <h1 className="text-center">{t("contacto")}</h1>
             <div style={{ display: "flex", justifyContent: "center" }}>
-                <img src={mapa} alt="Descripción de la imagen" />
+                <a href="https://www.google.com/maps/d/viewer?mid=1VSqlLPz_3L5j6WEm4pCpgdLgsMU&hl=es&ll=28.070911018283965%2C-16.557322109202985&z=21" target="_blank">
+                    <img style={{ border: "2px solid black" }} src={mapa} alt="Descripción de la imagen" />
+                </a>
             </div>
             <div>
                 <h1 className="text-center">Telefono: 822-15-11-14</h1>

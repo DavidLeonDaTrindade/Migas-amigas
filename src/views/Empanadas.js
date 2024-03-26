@@ -5,7 +5,7 @@ import empanada from "./Images/empanada.jpg";
 import empanadacarne from "./Images/empanadacarne.jpeg";
 import empanadapollo from "./Images/empanadapollo.jpeg";
 import empanadablanco from "./Images/empanadablanco.jpg";
-
+import "./Panaderia.css";
 
 
 const Empanadas = () => {
@@ -22,14 +22,14 @@ const Empanadas = () => {
         <div className="container mt-4">
             <h1 className="text-center">{t("TituloEmpanada")}</h1>
             
-        <Table striped bordered hover responsive variant="warning">
+        <Table striped bordered hover responsive variant="warning" style={{ maxWidth: "50%", minWidth: "50%", margin: "auto" }}>
             
             <tbody>
                 {products.map(product => (
-                    <tr key={product.id}>
-                        <td className="text-center">{product.name[i18n.language]}</td>
-                        <td className="text-center">{product.description[i18n.language]}</td>
-                        <td className="text-center"><img src={product.image} alt={product.name} style={{ maxWidth: "100px", maxHeight: "100px" }} /></td>
+                    <tr key={product.id} className="product-row">
+                        <td className="text-center" style={{ paddingTop:"25px",fontWeight: "bold", fontSize: "20px" }}>{product.name[i18n.language]}</td>
+                        <td className="text-center" style={{ paddingTop:"25px",fontWeight: "bold", fontSize: "20px" }}>{product.description[i18n.language]}</td>
+                        <td className="text-center"><img src={product.image} alt={product.name} style={{ maxWidth: "100px", maxHeight: "100px" }}  className="product-image"/></td>
                     </tr>
                 ))}
             </tbody>

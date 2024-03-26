@@ -8,15 +8,14 @@ const Principal = () => {
     const { t, i18n } = useTranslation();
 
     return (
-        <div className="container mt-4">
-            <div style={{ display: "flex", justifyContent: "center" }}>
-                <div style={{ flex: 1, marginRight: "20px" }}>
+        <div className="container mt-4" style={{ backgroundColor: "#e0e0e0", padding: "20px", borderRadius: "8px" }}>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <div style={{ flex: 1, marginRight: "20px", textAlign: "center" }}>
                     <img src={pan} alt="Imagen" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
                 <div style={{ flex: 1 }}>
-                    <p style={{ fontFamily: "Arial, sans-serif", fontSize: "18px", color: "#333", lineHeight: "1.5" }}>
+                    <p style={{ fontFamily: "Arial, sans-serif", fontSize: "18px", color: "#333", lineHeight: "1.5", textAlign: "center" }}>
                         <strong>{t("textoInicio")}</strong><br />
-                        
                     </p>
                 </div>
             </div>

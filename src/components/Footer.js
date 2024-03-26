@@ -9,7 +9,7 @@ const Footer = () => {
     const { i18n, t } = useTranslation();
 
     return (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginTop: "20px" }}>
+        <div style={{ backgroundColor: "#e0e0e0", display: "flex", flexDirection: "column", alignItems: "center", marginTop: "20px", padding: "20px", borderRadius: "8px", width: "100%" }}>
             <h1>{t("footer")}</h1>
             <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
                 <FontAwesomeIcon icon={faTwitter} size="2x" style={{ marginRight: "10px" }} />
@@ -21,4 +21,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
