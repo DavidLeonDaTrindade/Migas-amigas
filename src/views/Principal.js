@@ -12,6 +12,9 @@ const Principal = () => {
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <div style={{ flex: 1, marginRight: "20px", textAlign: "center" }}>
                     <img src={pan} alt="Imagen" style={{ maxWidth: "100%", height: "auto" }} />
+                    <figcaption style={{ fontFamily: "Arial, sans-serif",fontWeight:"bold", fontSize: "20px", color: "black", marginTop: "5px" }}>
+                        {t("pieImagen")}
+                    </figcaption>
                 </div>
                 <div style={{ flex: 1 }}>
                     <p style={{ fontFamily: "Arial, sans-serif", fontSize: "18px", color: "#333", lineHeight: "1.5", textAlign: "center" }}>

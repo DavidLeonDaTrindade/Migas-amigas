@@ -34,6 +34,7 @@ const Panaderia = () => {
             <h1 className="text-center">{t("tituloPan")}</h1>
 
             <Table bordered hover responsive variant="warning" style={{ maxWidth: "50%", minWidth: "50%", margin: "auto" }}>
+            <caption className="text-center" style={{fontWeight:"bold", fontSize:"18px"}}>{t("captionPanaderia")}</caption>
                 <tbody>
                     {products.map(product => (
                         <tr key={product.id} className="product-row">

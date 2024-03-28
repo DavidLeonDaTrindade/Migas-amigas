@@ -29,6 +29,7 @@ const Pasteleriabolleria = () => {
         <div style={{ maxWidth: "100%", textAlign: "center" }} className="container mt-4" >
             <h1>{t("titulodulces")}</h1>
             <Table striped bordered hover responsive variant="warning" style={{ maxWidth: "50%", minWidth: "50%", margin: "auto" }}>
+            <caption className="text-center" style={{fontWeight:"bold", fontSize:"18px"}}>{t("captionDulces")}</caption>
                 <tbody>
                     {products.map(product => (
                         <tr key={product.id} className="product-row">
