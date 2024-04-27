@@ -17,16 +17,16 @@ const Panaderia = () => {
     const { t, i18n } = useTranslation();
 
     const products = [
-        { id: 1, name: { es: "Pan de masa madre", pt: "Pão de fermento natural" }, description: { es: "Pan artesanal de masa madre", pt: "Pão artesanal de fermento natural" }, image: panmasamadre },
-        { id: 2, name: { es: "Pan Barra", pt: "Pão de forma" }, description: { es: "Pan estilo barra", pt: "pão estilo pão" }, image: panbarra },
-        { id: 3, name: { es: "Pan de leche", pt: "Pão de leite" }, description: { es: "Pan tradicional de leche", pt: "Pão de leite tradicional" }, image: panleche },
-        { id: 4, name: { es: "Pan de semillas", pt: "Pão de sementes" }, description: { es: "Pan aliñado con diferentes tipos de semilla que aportan un sabor unico", pt: "Pão temperado com diferentes tipos de sementes que proporcionam um sabor único" }, image: pansemilla },
-        { id: 5, name: { es: "Pan de leña", pt: "Pão de madeira" }, description: { es: "Pan Horneado a leña", pt: "Pão a lenha" }, image: panleña },
-        { id: 6, name: { es: "Pan de jamon", pt: "Pão com presunto" }, description: { es: "Pan relleno horneado tipico navideño", pt: "Pão recheado típico de Natal" }, image: panjamon },
-        { id: 7, name: { es: "Pan de queso", pt: "Pão de queijo" }, description: { es: "Pan relleno de queso recien horneado", pt: "Pão recheado com queijo recém-assado" }, image: panqueso },
-        { id: 8, name: { es: "Pan de mantequilla", pt: "Pão de manteiga" }, description: { es: "Pan elaborado con mantequilla tierno y jugoso", pt: "Pão feito com manteiga macia e suculenta" }, image: panmantequilla },
-        { id: 9, name: { es: "Pan de matalauva", pt: "Pão Matalauva" }, description: { es: "Pan con semillas de matalauva tradicional", pt: "Pão com sementes de matalauva tradicional" }, image: panmatalauva },
-        { id: 10, name: { es: "Pan de cristal", pt: "pão de cristal" }, description: { es: "Una vez horneado, el pan de cristal adquiere una textura muy crujiente y fina", pt: "Depois de assado, o pão de vidro adquire uma textura bem crocante e fina." }, image: pancristal }
+        { id: 1, name: { es: "Pan de masa madre", pt: "Pão de fermento natural" }, description: { es: "Pan artesanal de masa madre", pt: "Pão artesanal de fermento natural" }, image: panmasamadre, alt: { es: "Pan de masa madre", pt: "Pão de fermento natural" } },
+        { id: 2, name: { es: "Pan Barra", pt: "Pão de forma" }, description: { es: "Pan estilo barra", pt: "pão estilo pão" }, image: panbarra, alt: { es: "Pan Barra", pt: "Pão de forma" } },
+        { id: 3, name: { es: "Pan de leche", pt: "Pão de leite" }, description: { es: "Pan tradicional de leche", pt: "Pão de leite tradicional" }, image: panleche, alt: { es: "Pan de leche", pt: "Pão de leite" } },
+        { id: 4, name: { es: "Pan de semillas", pt: "Pão de sementes" }, description: { es: "Pan aliñado con diferentes tipos de semilla que aportan un sabor unico", pt: "Pão temperado com diferentes tipos de sementes que proporcionam um sabor único" }, image: pansemilla, alt: { es: "Pan de semillas", pt: "Pão de sementes" } },
+        { id: 5, name: { es: "Pan de leña", pt: "Pão de madeira" }, description: { es: "Pan Horneado a leña", pt: "Pão a lenha" }, image: panleña, alt: { es: "Pan de leña", pt: "Pão de madeira" } },
+        { id: 6, name: { es: "Pan de jamon", pt: "Pão com presunto" }, description: { es: "Pan relleno horneado tipico navideño", pt: "Pão recheado típico de Natal" }, image: panjamon, alt: { es: "Pan de jamon", pt: "Pão com presunto" } },
+        { id: 7, name: { es: "Pan de queso", pt: "Pão de queijo" }, description: { es: "Pan relleno de queso recien horneado", pt: "Pão recheado com queijo recém-assado" }, image: panqueso, alt: { es: "Pan de queso", pt: "Pão de queijo" } },
+        { id: 8, name: { es: "Pan de mantequilla", pt: "Pão de manteiga" }, description: { es: "Pan elaborado con mantequilla tierno y jugoso", pt: "Pão feito com manteiga macia e suculenta" }, image: panmantequilla, alt: { es: "Pan de mantequilla", pt: "Pão de manteiga" } },
+        { id: 9, name: { es: "Pan de matalauva", pt: "Pão Matalauva" }, description: { es: "Pan con semillas de matalauva tradicional", pt: "Pão com sementes de matalauva tradicional" }, image: panmatalauva, alt: { es: "Pan de matalauva", pt: "Pão Matalauva" } },
+        { id: 10, name: { es: "Pan de cristal", pt: "pão de cristal" }, description: { es: "Una vez horneado, el pan de cristal adquiere una textura muy crujiente y fina", pt: "Depois de assado, o pão de vidro adquire uma textura bem crocante e fina." }, image: pancristal, alt: { es: "Pan de cristal", pt: "pão de cristal" } }
     ];
 
     return (
@@ -34,7 +34,7 @@ const Panaderia = () => {
             <h1 className="text-center">{t("tituloPan")}</h1>
 
             <Table bordered hover responsive variant="warning" style={{ maxWidth: "50%", minWidth: "50%", margin: "auto" }}>
-            <caption className="text-center" style={{fontWeight:"bold", fontSize:"18px"}}>{t("captionPanaderia")}</caption>
+                <caption className="text-center" style={{fontWeight:"bold", fontSize:"18px"}}>{t("captionPanaderia")}</caption>
                 <tbody>
                     {products.map(product => (
                         <tr key={product.id} className="product-row">
@@ -43,7 +43,7 @@ const Panaderia = () => {
                             <td className="text-center">
                                 <img
                                     src={product.image}
-                                    alt={product.name}
+                                    alt={product.alt[i18n.language]}
                                     className="product-image"
                                 />
                             </td>

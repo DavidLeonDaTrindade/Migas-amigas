@@ -3,20 +3,19 @@ import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../constants/langs.ts";
 import mapa from "../imagen/maps.png";
 
-
-
-
 const Contacto = () => {
     const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        message: ""
+        message: "",
+        selectOption: "option1" // Agrega el estado para la opción seleccionada
     });
     const [isValid, setIsValid] = useState({
         name: true,
         email: true,
-        message: true
+        message: true,
+        selectOption: true // Agrega el estado de validación para la opción seleccionada
     });
     
     const inputNombreRef = useRef(null); // Ref para el input de nombre
@@ -47,7 +46,8 @@ const Contacto = () => {
         setFormData({
             name: "",
             email: "",
-            message: ""
+            message: "",
+            selectOption: "option1" // Restablece la opción seleccionada al valor predeterminado después de enviar el formulario
         });
     };
 
@@ -67,8 +67,9 @@ const Contacto = () => {
             <h1>{t("contacto")}</h1>
             <form onSubmit={handleSubmit}>
                 <div style={{ marginBottom: "15px" }}>
-                    <label>{t("nombreForm")}</label>
+                    <label htmlFor="nombre">{t("nombreForm")}</label>
                     <input
+                        id="nombre"
                         type="text"
                         name="name"
                         value={formData.name}
@@ -80,8 +81,9 @@ const Contacto = () => {
                     />
                 </div>
                 <div style={{marginBottom: "15px" }}>
-                    <label>Email</label>
+                    <label htmlFor="email">Email</label>
                     <input
+                        id="email"
                         type="email"
                         name="email"
                         value={formData.email}
@@ -92,8 +94,9 @@ const Contacto = () => {
                     />
                 </div>
                 <div style={{ marginBottom: "15px" }}>
-                    <label>{t("mensajeForm")}</label>
+                    <label htmlFor="mensaje">{t("mensajeForm")}</label>
                     <textarea
+                        id="mensaje"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
@@ -103,13 +106,14 @@ const Contacto = () => {
                     />
                 </div>
                 <div style={{ marginBottom: "15px" }}>
-                    <label>{t("select")}</label>
+                    <label htmlFor="selectOption">{t("select")}</label>
                     <select
-                        name={t("select")}
+                        id="selectOption"
+                        name="selectOption"
                         value={formData.selectOption}
                         onChange={handleChange}
                         required
-                        style={{ width: "100%", padding: "10px", borderRadius: "4px", border: `1px solid ${!isValid.message ? "red" : "#ccc"}` }}>
+                        style={{ width: "100%", padding: "10px", borderRadius: "4px", border: `1px solid ${!isValid.selectOption ? "red" : "#ccc"}` }}>
                         <option value="option1">{t("opcion1")}</option>
                         <option value="option2">{t("opcion2")}</option>
                         <option value="option3">{t("opcion3")}</option>

@@ -27,7 +27,7 @@ const Empanadas = () => {
                         <tr key={product.id} className="product-row">
                             <td className="text-center" style={{ paddingTop:"25px",fontWeight: "bold", fontSize: "20px" }}>{product.name[i18n.language]}</td>
                             <td className="text-center" style={{ paddingTop:"25px",fontWeight: "bold", fontSize: "20px" }}>{product.description[i18n.language]}</td>
-                            <td className="text-center"><img src={product.image} alt={product.name} style={{ maxWidth: "100px", maxHeight: "100px" }}  className="product-image"/></td>
+                            <td className="text-center"><img src={product.image} alt={product.name[i18n.language]} style={{ maxWidth: "100px", maxHeight: "100px" }}  className="product-image"/></td>
                         </tr>
                     ))}
                 </tbody>

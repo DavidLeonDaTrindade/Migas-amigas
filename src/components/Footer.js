@@ -20,10 +20,14 @@ const Footer = () => {
                     <FontAwesomeIcon icon={faFacebook} size="2x" />
                     <span style={{ display: "block",fontWeight:"bold" }}>Facebook</span>
                 </div>
-                <div style={{ textAlign: "center" }}>
+                <div style={{ textAlign: "center", marginRight: "20px" }}>
                     <FontAwesomeIcon icon={faInstagram} size="2x" />
                     <span style={{ display: "block", fontWeight:"bold" }}>Instagram</span>
                 </div>
+            </div>
+            <div style={{ textAlign: "center", marginTop: "20px" }}>
+                <p style={{fontWeight:"bold"}}>{t("Nos comprometemos a proteger la privacidad y los datos personales de nuestros usuarios. Cumplimos con las normativas de protección de datos vigentes y utilizamos medidas de seguridad adecuadas para proteger la información proporcionada por nuestros usuarios.")}</p>
+                <p style={{fontWeight:"bold"}}>{t("Todos los textos, imágenes y recursos visuales están sujetos a los derechos de propiedad intelectual correspondientes. Si encuentras algún contenido que infrinja tus derechos de autor, por favor contáctanos para que podamos tomar las medidas adecuadas.")}</p>
             </div>
         </div>
     );
